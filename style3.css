@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #e8f0f7;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header{
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 99;
+}
+
+.header__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  min-height: 60px;
+
+}
+
+.logo{
+  color: #fff;
+  font-size: 23px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+.nav{
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__list{
+  display: flex;
+  column-gap: 40px;
+  margin: 0 auto;
+}
+
+.nav__link{
+  color: rgba(255,255,255,0.75);  
+  font-size: 15px;
+  transition: all 0.4s;
+}
+
+.nav__link:hover{
+  color: rgb(255, 208, 0); 
+  text-decoration: none;
+
+}
+
+.nav__link:focus{
+  color: rgba(255,255,255,1);  
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  height: 2px;
+  width: 27px;
+  background: #fff;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.nav__open{
+  transform: translate(0) !important;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+}
+
+@media(max-width:716px){
+  .nav{
+    position: fixed;
+    top: 100px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    padding: 10px 0 25px;
+    transform: translateX(-100%);
+  }
+
+  .nav__list{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .nav__link{
+    font-size: 14px;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}
+
+@media(max-width:1000px){
+  .navbar ul li{
+    font-size: 14px;
+  }  
+
+  .logo {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+@media(max-width:730px){
+  .navbar ul li{
+    font-size: 14px;
+  }  
+
+  .logo {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+@media(max-width:646px){
+  .navbar ul li{
+    font-size: 11px;
+  }  
+
+  .nav{
+    top: 70px;
+  }
+
+  .logo {
+    width: 140px;
+    height: 70px;
+  }
+}
+
+@media(max-width:560px){
+  .navbar ul li{
+    font-size: 9px;
+  }  
+
+  .nav{
+    top: 55px;
+  }
+
+  .logo {
+    width: 110px;
+    height: 50px;
+  }
+}
+
+.mainTitle{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+hr.horizontal {
+  border: 1px solid red;
+}
+
+.main-menu{
+  width: 100%;
+  margin: 70px;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.header-text{
+  padding-right: 120px;
+  font-family: Arial, Helvetica, sans-serif, 'Roboto';
+  font-weight: 400px;
+}
+
+.main-text{
+  padding-right: 120px;
+  padding-top: 28px;
+  font-family: Arial, Helvetica, sans-serif, 'Quicksand';
+  font-size: 17px;
+}
+
+@media(max-width:730px){
+  .main-text{
+    font-size: 13px;
+  }
+}
+
+.carcontainer{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.carbox{
+  border: solid 1px white;
+  width: 50%;
+  overflow: hidden;
+}
+
+.carbox img{
+  width: 100%;
+  display: block;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.carbox img:hover{
+  transform: scale(1.1);
+}
+
+.cartext{
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cartextheader{
+  padding-bottom: 13px;
+  font-family: Arial, Helvetica, sans-serif, 'Roboto';
+  font-weight: 400;
+}
+
+.cartextmain{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif, 'Quicksand';
+  color: rgb(126, 126, 126);
+}
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+.hover-2 .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2-description {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 30%;
+  right: 100%;
+  text-align: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2:hover .hover-2-title {
+  transform: translateY(-1.5rem);
+}
+
+.hover-2:hover .hover-2-description {
+  bottom: 0.5rem;
+  opacity: 1;
+}
+
+.hover-2:hover .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+
+.hover-button{
+  padding: 0;
+  border: none;
+  background: none;
+  border: 0px; 
+  cursor: pointer; 
+  color: #ffd17d; 
+}
+
+.hover-button:hover{
+  color: #f9f8f7; 
+}
+
+@media(max-width:725px){
+  .hover-button{
+    font-size: 11px;
+  }
+
+  .hover {
+    padding-bottom: 50%;
+  }
+}
+
+form{
+  padding: 40px;
+}
+
+form h3{
+  text-align: center;
+}
+
+.footer {
+  background: black;
+  padding: 8px;
+  color:#eee;
+  display: flex;
+  margin-top: 80px;
+}
+
+.footer a{
+  color: white;
+}
+
+.footer a:hover{
+  color: white;
+  color: #ffd17d; 
+  text-decoration: none;
+  
+}
+
+.footer #left-footer{
+  flex:1;
+  border-right: 1px solid red;
+  padding-left: 32px;
+}
+
+.footer #left-footer ul{
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.footer #right-footer{
+  flex: 2;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer #social-media-footer a .fa-facebook,
+.footer #social-media-footer a .fa-youtube,
+.footer #social-media-footer a .fa-twitter {
+  color: white;
+  transition: 0.4s;
+}
+
+.footer #social-media-footer ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer #social-media-footer ul li{
+  font-size: 48px;
+  padding: 16px;
+  transition: 0.4s;
+}
+
+.footer #social-media-footer ul li:hover a .fa-youtube{
+  color: red;
+}
+
+.footer #social-media-footer ul li:hover a .fa-facebook{
+  color: #3b5998;
+}
+
+.footer #social-media-footer ul li:hover a .fa-instagram{
+  color:  #b47eed;
+}
+
